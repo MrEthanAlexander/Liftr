@@ -1,0 +1,28 @@
+avo_toast = {
+	"meal_name" : "Avocado Toast",
+	"ingredients" : 
+		[{"name" : "avocado", "quantity": "1"}, 
+		 {"name" : "ww_bread", "quantity" : "2"}],
+	"Calories" : "avocado.calories + (2 * ww_bread.calories)"
+}
+
+
+tky_sdwch_w_apple = {
+	"meal_name" : "Turkey Sandwich with Apple",
+	"ingredients" : 
+		[{"name" : "avocado", "quantity": "1"}, 
+		 {"name" : "ww_bread", "quantity" : "2"},
+		 {"name" : "sliced_turkey", "quantity" : "5"}
+		 {"name" : "sliced_ch_cheese", "quantity" : "1"},
+		 {"name" : "apple", "quantity" : "1"}],
+	"Calories" : "avocado.calories + (2 * ww_bread.calories) + (5 * sliced_turkey.calories) + sliced_ch_cheese.calories + apple.calories"
+}
+
+chk_broc_pasta {
+	"meal_name" : "Chicken Broccoli Pasta",
+	"ingredients" : 
+		[{"name" : "grilled_ch_breast", "quantity" : "1"}, 
+		 {"name" : "brocolli", "quantity" : "2"},
+		 {"name" : "pasta", "quantity" : "1"}],
+	"Calories" : "grilled_ch_breast.calories + (2 * brocolli.calories) + pasta.calories"
+}
