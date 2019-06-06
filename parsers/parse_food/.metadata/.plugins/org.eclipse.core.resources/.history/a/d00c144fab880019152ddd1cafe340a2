@@ -1,0 +1,40 @@
+package read_food;
+
+
+import java.io.FileReader;
+import java.util.ArrayList;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+import food_obj.*;
+
+
+public class Reader {
+	private static final String FILENAME = "food_data.json";
+	public static ArrayList<Food> loadFoods() {
+		ArrayList<Food> food_list = new ArrayList<Food>();
+		try {
+			FileReader reader = new FileReader("src/"+FILENAME);
+			JSONParser parser = new JSONParser();
+			JSONObject jsonData = (JSONObject)new JSONParser().parse(reader);
+			JSONArray foodJSON = (JSONArray)jsonData.get("food_array");
+
+			for(int i=0; i < foodJSON.size(); i++) {
+				JSONObject personJSON = (JSONObject)foodJSON.get(i);
+				String name = (String)personJSON.get("name");
+				String calories = (String)personJSON.get("calories");
+				String serving_size = (String)personJSON.get("serving_size");
+
+				food_list.add(new Food(name, calories, serving_size));
+			}
+
+			return food_list;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+}

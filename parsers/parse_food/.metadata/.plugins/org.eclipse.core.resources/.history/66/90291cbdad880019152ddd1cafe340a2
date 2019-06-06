@@ -1,0 +1,19 @@
+package main;
+
+import java.util.ArrayList;
+import food_obj.*;
+import read_food.Reader;
+import write_food.Writer;
+
+public class Parser {
+	public static void main(String[] args) {
+		FoodList fl = FoodList.getInstance();
+		ArrayList<Food> foods = fl.getFoodList();
+		
+		for(Food item : foods) {
+			System.out.println(item.getname() + '\t' + item.getcalories() + '\t' +item.getserving_size())
+		}
+
+	}
+
+}

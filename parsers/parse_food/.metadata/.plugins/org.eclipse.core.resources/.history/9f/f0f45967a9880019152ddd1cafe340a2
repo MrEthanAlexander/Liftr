@@ -1,0 +1,25 @@
+package food_obj;
+
+import java.util.ArrayList;
+import read_food.Reader;
+
+public class FoodList {
+	private static Food FoodList = null;
+	private static ArrayList<Food> FoodList = new ArrayList<Food>();
+
+	private FoodList() {
+		FoodList = Reader.loadFoodList();
+	}
+
+	public static FoodList getInstance() {
+		if(FoodList == null) {
+			FoodList = new FoodList();
+		}
+
+		return FoodList;
+	}
+
+	public ArrayList<Food> getFoodList() {
+		return FoodList;
+	}
+}

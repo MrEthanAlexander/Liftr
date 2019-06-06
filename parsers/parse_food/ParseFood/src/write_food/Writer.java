@@ -1,0 +1,6 @@
+package write_food;
+
+public class Writer {
+	
+
+}

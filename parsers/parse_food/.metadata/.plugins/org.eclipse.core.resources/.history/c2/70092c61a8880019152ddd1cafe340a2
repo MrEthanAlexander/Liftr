@@ -1,0 +1,10 @@
+package main;
+import read_food.Reader;
+import write_food.Writer;
+
+public class Parser {
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,11 @@
+package main;
+import read_food.Reader;
+import write_food.Writer;
+
+public class Parser {
+	private static final String FILENAME = "food_data.json";
+	public static void main(String[] args) {
+
+	}
+
+}

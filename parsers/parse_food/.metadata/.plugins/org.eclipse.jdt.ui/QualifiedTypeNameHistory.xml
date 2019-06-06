@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="write_food.Writer"/>
+<fullyQualifiedTypeName name="read_food.Reader"/>
+<fullyQualifiedTypeName name="food_obj.Food"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>
