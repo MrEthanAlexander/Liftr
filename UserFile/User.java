@@ -10,6 +10,7 @@ public class User
   private String gender;
   private int weight;
   private int height;
+  private int BMI;
   private String bodyType;
   private String description;
   public User()
@@ -24,13 +25,26 @@ public class User
     this.gender = "no gender";
     this.weight = 85.0;
     this.height = 100.0;
+    this.BMI = 0;
     this.bodyType = "no body type";
     this.description = "empty description";
   }
   public User(String xName, String xUser, String xPass, String xQuestion, String xAnswer,
-  boolean xPrivacy, int xAge, String xGender, double xWeight, double xHeight, String xBody, String Description)
+  boolean xPrivacy, int xAge, String xGender, double xWeight, double xHeight, String xBody, String xDescription)
   {
     //TODO
+    this.setName(xName);
+    this.setUser(xUser);
+    this.setPass(xPass);
+    this.setAnswer(xQuestion);
+    this.setPrivacy(xAnswer);
+    this.setAge(xAge);
+    this.setGender(xGender);
+    this.setWeight(xWeight);
+    this.setHeight(xHeight)
+    this.calculateBMI();
+    this.setBody(xBody);
+    this.description(xDescription);
   }
   public String getName()
   {
@@ -78,26 +92,58 @@ public class User
   }
   public void setPrivacy(boolean privacy)
   {
-    this.privacy = ;
+    this.privacy = privacy;
   }
   public int getAge()
   {
     return this.age;
   }
+  public void setAge(int age)
+  {
+    this.age = age;
+  }
+  public String getGender()
+  {
+    return this.gender;
+  }
+  public void setGender(String gender)
+  {
+    this.gender = gender;
+  }
   public int getWeight()
   {
     return this.weight;
   }
+  public void setWeight(int weight)
+  {
+    this.weight = weight;
+  }
   public int getHeight()
   {
-    return this.username;
+    return this.height;
+  }
+  public void setHeight(int height)
+  {
+    this.height = height;
+  }
+  public int calculateBMI()
+  {
+    return (int)(this.weight*703)/(Math.pow(this.height,2));
   }
   public String getBody()
   {
     return this.bodyType;
   }
+  public void setBody(String type)
+  {
+      this.body = type;
+  }
   public String getDescription()
   {
     return this.description;
+  }
+  public void setDescription(String description)
+  {
+    this.description = description;
   }
 }
