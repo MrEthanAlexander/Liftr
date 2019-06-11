@@ -32,7 +32,6 @@ public class User
   public User(String xName, String xUser, String xPass, String xQuestion, String xAnswer,
   boolean xPrivacy, int xAge, String xGender, double xWeight, double xHeight, String xBody, String xDescription)
   {
-    //TODO
     this.setName(xName);
     this.setUser(xUser);
     this.setPass(xPass);
